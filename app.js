@@ -1,5 +1,5 @@
 // Initialize Particles.js
-particlesJS('particles-js', {
+ParticlesJS('particles-js', {
     particles: {
         number: { value: 50 },
         color: { value: '#6a11cb' },
