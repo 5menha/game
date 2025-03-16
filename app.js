@@ -37,7 +37,14 @@ function showDownloadModal() {
 }
 
 function hideModal() {
-    document.getElementById('downloadModal').style.display = 'none';
+    const modal = document.getElementById('downloadModal');
+    const btn = modal.querySelector('.download-btn');
+    
+    // إعادة تعيين حالة الزر
+    btn.innerHTML = `متابعة <i class="fas fa-check"></i>`;
+    btn.disabled = false;
+    
+    modal.style.display = 'none';
 }
 
 function startDownload() {
@@ -51,10 +58,11 @@ function startDownload() {
     });
     
     setTimeout(() => {
+        // إعادة التعيين قبل التوجيه
+        hideModal();
         window.location.href = 'https://github.com/Joe2G/5menha/releases/download/v1.0.0/5menha.apk';
     }, 1000);
 }
-
 // Close modal when clicking outside
 window.onclick = function(event) {
     const modal = document.getElementById('downloadModal');
