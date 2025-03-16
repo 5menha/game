@@ -118,6 +118,24 @@ body {
     left: 100%;
 }
 
+/* تحسينات إضافية للزر المعطل */
+.download-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    filter: grayscale(0.3);
+}
+
+/* تحسينات للزر أثناء التحميل */
+.download-btn .fa-spinner {
+    margin-left: 8px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .info-section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
