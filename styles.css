@@ -274,8 +274,9 @@ body {
     .modal-content {
         padding: 1.5rem;
     }
-  }
+}
 
+/* Enhanced Contact Us Section */
 .contact-section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
@@ -289,6 +290,15 @@ body {
     animation: fadeInUp 0.8s forwards;
 }
 
+/* Heading style for Contact Us */
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Layout for the contact links */
 .contact-links {
     display: flex;
     justify-content: center;
@@ -297,6 +307,7 @@ body {
     flex-wrap: wrap;
 }
 
+/* Styling for each contact item */
 .contact-item {
     display: flex;
     align-items: center;
@@ -306,19 +317,29 @@ body {
     padding: 1rem 2rem;
     border-radius: 50px;
     background: linear-gradient(45deg, rgba(87, 46, 168, 0.2), rgba(58, 111, 249, 0.2));
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--primary);
 }
 
+/* Enhanced hover effect with subtle scale and glow */
 .contact-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(87, 46, 168, 0.3);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
 }
 
+/* Refined icon styling within contact items */
 .contact-item i {
     font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
 }
 
+/* Specific colors for social icons */
 .fa-instagram { color: #e1306c; }
 .fa-envelope { color: #ea4335; }
 
@@ -331,4 +352,4 @@ body {
         justify-content: center;
         padding: 1rem;
     }
-}
+    }
