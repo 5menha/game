@@ -275,3 +275,60 @@ body {
         padding: 1.5rem;
     }
   }
+
+.contact-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 3rem 0;
+    border: 2px solid var(--primary);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background: linear-gradient(45deg, rgba(87, 46, 168, 0.2), rgba(58, 111, 249, 0.2));
+    transition: all 0.3s ease;
+    border: 1px solid var(--primary);
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(87, 46, 168, 0.3);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+}
+
+.fa-instagram { color: #e1306c; }
+.fa-envelope { color: #ea4335; }
+
+@media (max-width: 480px) {
+    .contact-links {
+        flex-direction: column;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        padding: 1rem;
+    }
+}
