@@ -24,20 +24,17 @@
           crossorigin="anonymous" 
           referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.svg" type="image/svg+xml"></link>
 </head>
 <body>
     <div id="particles-js"></div>
     
     <div class="container">
-        <img src="5menha.png" 
-             alt="شعار لعبة خمّنها" 
-             class="logo"
-             loading="lazy"
-             decoding="async">
-
         <div class="download-section">
-            <h1>خـمِّـنها</h1>
-            
+            <img src="5menha.png" alt="خـمِّـنها" style="width: 200px; height: auto;"class="logo"
+            loading="lazy"
+            decoding="async">
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">استمتع بلعبة تخمين مسلية مع أصدقائك!</p>
             <a href="#" class="download-btn" 
                role="button" 
                aria-label="تحميل اللعبة"
@@ -46,17 +43,17 @@
                 <i class="fas fa-download"></i>
             </a>
             <div class="contact-section">
-    <h2>تواصل معنا</h2>
-    <div class="contact-links">
-        <a href="https://www.instagram.com/5menha?igsh=bHF4NGV6ZjVyaDYw" target="_blank" class="contact-item">
-            <i class="fab fa-instagram"></i>
-            <span>5menha</span>
-        </a>
-        <a href="mailto:5menhateam@gmail.com" class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>5menha team</span>
-        </a>
-    </div>
+                <h2>تواصل معنا</h2>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/5menha?igsh=bHF4NGV6ZjVyaDYw" target="_blank" class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>5menha</span>
+                    </a>
+                    <a href="mailto:5menhateam@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>5menha team</span>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -64,25 +61,24 @@
             <h2>مميزات اللعبة</h2>
             <div class="features">
                 <div class="feature-card">
-                    <h3>🎮 لعبة خفيفة ومسلية</h3>
-                    <p>حجم صغير + تسلية أكثر</p>
+                    <h3><i class="fas fa-gamepad"></i> لعبة خفيفة ومسلية</h3>
+                    <p>حجم صغير + تسلية اكتر </p>
                 </div>
                 <div class="feature-card">
-                    <h3>🏆 نظام نقاط متقدم</h3>
+                    <h3><i class="fas fa-trophy"></i> نظام نقاط متقدم</h3>
                     <p>احصل على نقاط أكثر حسب مستوى الصعوبة + البونص 🔥</p>
                 </div>
                 <div class="feature-card">
-                    <h3>👥 تحدي الأصدقاء</h3>
+                    <h3><i class="fas fa-users"></i> تحدي الأصدقاء</h3>
                     <p>العب مع أصدقائك حتى 15 لاعبًا</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Download Modal -->
-    <div id="downloadModal" class="modal">
+    <div id="downloadModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <h3>سيبدأ التحميل الآن</h3>
+            <h3 id="modalTitle">سيبدأ التحميل الآن</h3>
             <p>حجم الملف: 3.5MB</p>
             <div class="modal-buttons">
                 <button class="download-btn" onclick="startDownload()">
@@ -100,7 +96,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
             integrity="sha384-9/Lh7mXSwB1d7a1z7Kq6nU2z3G+qTz4yMLqJ3wZJZnY5vEG7J2K4PY5fC7Y4fD4O" 
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"</script>
     <script src="app.js"></script>
 </body>
 </html>
