@@ -1,84 +1,123 @@
-// Initialize Particles.js
-window.particlesJS('particles-js', {
-    particles: {
-        number: { value: 50 },
-        color: { value: '#6a11cb' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        move: {
-            enable: true,
-            speed: 1.5,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false,
-        }
+window.particlesJS("particles-js", {
+  particles: {
+    number: { value: 50 },
+    color: { value: "#6a11cb" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    move: {
+      enable: true,
+      speed: 1.5,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
     },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: { enable: true, mode: 'repulse' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
-        }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "repulse" },
+      onclick: { enable: true, mode: "push" },
+      resize: true,
     },
-    retina_detect: true
+  },
+  retina_detect: true,
 });
 
 // Modal Functions
 function showDownloadModal() {
-    document.getElementById('downloadModal').style.display = 'flex';
-    gtag('event', 'modal_opened', {
-        'event_category': 'engagement',
-        'event_label': 'download_modal'
-    });
+  document.getElementById("downloadModal").style.display = "flex";
+  gtag("event", "modal_opened", {
+    event_category: "engagement",
+    event_label: "download_modal",
+  });
 }
 
 function hideModal() {
-    const modal = document.getElementById('downloadModal');
-    const btn = modal.querySelector('.download-btn');
-    
-    // إعادة تعيين حالة الزر
-    btn.innerHTML = `متابعة <i class="fas fa-check"></i>`;
-    btn.disabled = false;
-    
-    modal.style.display = 'none';
+  const modal = document.getElementById("downloadModal");
+  const btn = modal.querySelector(".download-btn");
+
+  // إعادة تعيين حالة الزر
+  btn.innerHTML = `متابعة <i class="fas fa-check"></i>`;
+  btn.disabled = false;
+
+  modal.style.display = "none";
 }
 
 function startDownload() {
-    const btn = document.querySelector('#downloadModal .download-btn');
-    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> جاري التحميل...`;
-    btn.disabled = true;
-    
-    gtag('event', 'download_started', {
-        'event_category': 'engagement',
-        'event_label': 'apk_download'
-    });
-    
-    setTimeout(() => {
-        // إعادة التعيين قبل التوجيه
-        hideModal();
-        window.location.href = 'https://github.com/Joe2G/5menha/releases/download/v1.0.0/5menha.apk';
-    }, 1000);
+  const btn = document.querySelector("#downloadModal .download-btn");
+  btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> جاري التحميل...`;
+  btn.disabled = true;
+
+  gtag("event", "download_started", {
+    event_category: "engagement",
+    event_label: "apk_download",
+  });
+
+  setTimeout(() => {
+    // إعادة التعيين قبل التوجيه
+    hideModal();
+    window.location.href =
+      "https://github.com/Joe2G/5menha/releases/download/v1.0.0/5menha.apk";
+  }, 1000);
 }
 // Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('downloadModal');
-    if (event.target === modal) {
-        hideModal();
-    }
-}
+window.onclick = function (event) {
+  const modal = document.getElementById("downloadModal");
+  if (event.target === modal) {
+    hideModal();
+  }
+};
 
 // Intersection Observer for animations
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
 });
 
-document.querySelectorAll('.info-section').forEach((el) => observer.observe(el));
+document
+  .querySelectorAll(".info-section")
+  .forEach((el) => observer.observe(el));
+
+function startAnotherGameDownload() {
+    const btn = document.querySelector("#anotherGameModal .download-btn");
+    btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> جاري التحميل...`;
+    btn.disabled = true;
+
+    gtag("event", "download_started", {
+        event_category: "engagement",
+        event_label: "another_game_download",
+    });
+
+    setTimeout(() => {
+        // إعادة التعيين قبل التوجيه
+        hideAnotherGameModal();
+        window.location.href =
+            "https://github.com/Joe2G/5menha/releases/download/v1.5.1/Kingofthefield.apk";
+    }, 1000);
+}
+
+function hideAnotherGameModal() {
+    const modal = document.getElementById("anotherGameModal");
+    const btn = modal.querySelector(".download-btn");
+
+    // إعادة تعيين حالة الزر
+    btn.innerHTML = `تحميل <i class="fas fa-download"></i>`;
+    btn.disabled = false;
+
+    modal.style.display = "none";
+}
+
+function showAnotherGameModal() {
+    document.getElementById("anotherGameModal").classList.remove("hidden");
+  }
+  
+  function hideAnotherGameModal() {
+    document.getElementById("anotherGameModal").classList.add("hidden");
+  }
