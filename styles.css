@@ -1,370 +1,485 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap");
 
 :root {
-    --primary: #6a11cb;
-    --secondary: #3a6ff9;
-    --accent: #ff6b6b;
-    --background: linear-gradient(-45deg, #12122b, #1c1033, #2b1025, #12122b);
+  --primary: #6a11cb;
+  --secondary: #3a6ff9;
+  --accent: #ff6b6b;
+  --background: linear-gradient(-45deg, #12122b, #1c1033, #2b1025, #12122b);
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Tajawal', sans-serif;
-    background: var(--background);
-    color: #fff;
-    min-height: 100vh;
-    line-height: 1.6;
-    position: relative;
+  font-family: "Tajawal", sans-serif;
+  background: var(--background);
+  color: #fff;
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
 }
 
 #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    position: relative;
-    z-index: 1;
-    background: transparent;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }
 
 .logo {
-    width: 160px;
-    filter: drop-shadow(0 0 15px rgba(106, 17, 203, 0.8));
-    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
-    display: block;
-    margin: 0 auto;
+  width: 160px;
+  filter: drop-shadow(0 0 15px rgba(106, 17, 203, 0.8));
+  animation: float 3s ease-in-out infinite,
+    glow 2s ease-in-out infinite alternate;
+  display: block;
+  margin: 0 auto;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 @keyframes glow {
-    from { filter: drop-shadow(0 0 10px rgba(106, 17, 203, 0.6)); }
-    to { filter: drop-shadow(0 0 20px rgba(106, 17, 203, 1)); }
+  from {
+    filter: drop-shadow(0 0 10px rgba(106, 17, 203, 0.6));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(106, 17, 203, 1));
+  }
 }
 
 .download-section {
-    background: linear-gradient(45deg, rgba(87, 46, 168, 0.2), rgba(58, 111, 249, 0.2));
-    border-radius: 20px;
-    padding: 2.5rem;
-    margin: 3rem 0;
-    backdrop-filter: blur(12px);
-    border: 2px solid var(--primary);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    rgba(87, 46, 168, 0.2),
+    rgba(58, 111, 249, 0.2)
+  );
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  backdrop-filter: blur(12px);
+  border: 2px solid var(--primary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
 .download-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-    transform: rotate(45deg);
-    animation: shine 6s infinite;
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shine 6s infinite;
 }
 
 @keyframes shine {
-    0% { transform: rotate(45deg) translateX(-150%); }
-    100% { transform: rotate(45deg) translateX(150%); }
+  0% {
+    transform: rotate(45deg) translateX(-150%);
+  }
+  100% {
+    transform: rotate(45deg) translateX(150%);
+  }
 }
 
 .download-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 1.5rem 3rem;
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    border: none;
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    box-shadow: 0 8px 24px rgba(87, 46, 168, 0.4);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(87, 46, 168, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .download-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .download-btn:hover::after {
-    left: 100%;
+  left: 100%;
 }
 
 /* تحسينات إضافية للزر المعطل */
 .download-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    filter: grayscale(0.3);
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: grayscale(0.3);
 }
 
 /* تحسينات للزر أثناء التحميل */
 .download-btn .fa-spinner {
-    margin-left: 8px;
-    animation: spin 1s linear infinite;
+  margin-left: 8px;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .info-section {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 3rem 0;
-    border: 2px solid var(--primary);
-    backdrop-filter: blur(8px);
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fadeInUp 0.8s forwards;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 2px solid var(--primary);
+  backdrop-filter: blur(8px);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
 }
 
 @keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
 .feature-card {
-    background: linear-gradient(135deg, rgba(87, 46, 168, 0.2), rgba(58, 111, 249, 0.2));
-    padding: 2rem;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--primary);
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(87, 46, 168, 0.2),
+    rgba(58, 111, 249, 0.2)
+  );
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(87, 46, 168, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(87, 46, 168, 0.3);
 }
 
 .feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-    transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: 0.5s;
 }
 
 .feature-card:hover::before {
-    left: 100%;
+  left: 100%;
 }
 
 .feature-card h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background: linear-gradient(45deg, #1c1033, #12122b);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    border: 2px solid var(--primary);
-    animation: modalIn 0.3s ease-out;
-    max-width: 90%;
+  background: linear-gradient(45deg, #1c1033, #12122b);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid var(--primary);
+  animation: modalIn 0.3s ease-out;
+  max-width: 90%;
 }
 
 @keyframes modalIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .cancel-btn {
-    background: linear-gradient(45deg, #ff4d4d, #ff6b6b) !important;
+  background: linear-gradient(45deg, #ff4d4d, #ff6b6b) !important;
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .download-btn {
-        font-size: 1.1rem;
-        padding: 1.2rem 2.5rem;
-    }
-    
-    .features {
-        grid-template-columns: 1fr;
-    }
-    
-    .download-section {
-        padding: 1.5rem;
-    }
+  .container {
+    padding: 1rem;
+  }
+
+  .download-btn {
+    font-size: 1.1rem;
+    padding: 1.2rem 2.5rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .download-section {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .download-btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .modal-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .modal-content {
-        padding: 1.5rem;
-    }
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
 }
 
 /* Enhanced Contact Us Section */
 .contact-section {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 3rem 0;
-    border: 2px solid var(--primary);
-    backdrop-filter: blur(8px);
-    text-align: center;
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fadeInUp 0.8s forwards;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 3rem 0;
+  border: 2px solid var(--primary);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.8s forwards;
 }
 
 /* Heading style for Contact Us */
 .contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Layout for the contact links */
 .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /* Styling for each contact item */
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    background: linear-gradient(45deg, rgba(87, 46, 168, 0.2), rgba(58, 111, 249, 0.2));
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    45deg,
+    rgba(87, 46, 168, 0.2),
+    rgba(58, 111, 249, 0.2)
+  );
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--primary);
 }
 
 /* Enhanced hover effect with subtle scale and glow */
 .contact-item:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(106, 17, 203, 0.4);
 }
 
 /* Refined icon styling within contact items */
 .contact-item i {
-    font-size: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
 }
 
 /* Specific colors for social icons */
-.fa-instagram { color: #e1306c; }
-.fa-envelope { color: #ea4335; }
+.fa-instagram {
+  color: #e1306c;
+}
+.fa-envelope {
+  color: #ea4335;
+}
 
 @media (max-width: 480px) {
-    .contact-links {
-        flex-direction: column;
-    }
-    
-    .contact-item {
-        justify-content: center;
-        padding: 1rem;
-    }
-    }
-        .download-btn.loading {
-            pointer-events: none;
-            opacity: 0.8;
-        }
-        .download-btn.loading::after {
-            content: '';
-            animation: none;
-        }
-        .download-btn.loading .fa-download {
-            display: none;
-        }
-        .download-btn.loading::before {
-            content: '\f110';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
-        }
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+.download-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+.download-btn.loading::after {
+  content: "";
+  animation: none;
+}
+.download-btn.loading .fa-download {
+  display: none;
+}
+.download-btn.loading::before {
+  content: "\f110";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+#anotherGameModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Make sure it’s on top */
+}
+
+#anotherGameModal.hidden {
+    display: none;
+}
+
+#anotherGameModal .modal-content {
+  background: linear-gradient(45deg, #1c1033, #12122b);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid var(--primary);
+  animation: modalIn 0.3s ease-out;
+  max-width: 90%;
+}
+
+#anotherGameModal .modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+#anotherGameModal .cancel-btn {
+  background: linear-gradient(45deg, #ff4d4d, #ff6b6b) !important;
+}
+
+@media (max-width: 768px) {
+  #anotherGameModal .modal-content {
+    padding: 1.5rem;
+  }
+
+  #anotherGameModal .modal-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #anotherGameModal .modal-content {
+    padding: 1.2rem;
+  }
+
+  #anotherGameModal .modal-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
