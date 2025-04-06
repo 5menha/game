@@ -48,6 +48,17 @@
             <p id="lastUpdate" style="text-align: center; font-size: 1rem; margin-top: 1rem; opacity: 0.8;">
                 آخر تحديث: <span id="updateDate">31/3/2025</span>
             </p>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">حمل ألعاب أخرى:</p>
+                <a href="#" class="download-btn" 
+                   role="button" style="font-size: 1.2rem; padding: 0.8rem 1.5rem; width: 200px;"
+                   aria-label="تحميل لعبة أخرى"
+                   onclick="showAnotherGameModal()">
+                    On The Field
+                    <i class="fas fa-download"></i>
+                </a>
+            </div>
+            
             <div class="contact-section">
                 <h2>تواصل معنا</h2>
                 <div class="contact-links">
@@ -98,6 +109,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal for "On The Field" game -->
+    <div id="anotherGameModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="anotherGameModalTitle">
+        <div class="modal-content">
+          <h3 id="anotherGameModalTitle">فـ الملعب - On The Field</h3>
+          <p>اختبر معرفتك الكروية وتحدى أصدقائك في لعبة تخمين اللاعبين لمعرفة من سيكون كينج الملعب ويجمع أكبر عدد من النقاط.</p>
+          <p>حجم الملف: 3.6MB</p>
+          <div class="modal-buttons">
+            <button class="download-btn" onclick="startAnotherGameDownload()">
+              متابعة
+              <i class="fas fa-check"></i>
+            </button>
+            <button class="download-btn cancel-btn" onclick="hideAnotherGameModal()">
+              إلغاء
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>      
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
